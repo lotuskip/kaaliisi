@@ -1,0 +1,35 @@
+kaaliisi the roguelike version 1 readme file
+--------------------------------------------
+
+kaaliisi is a minimalistic roguelike game for Linux. A player character only has
+one stat, called "buffness", and the aim of the game is to become as buff as
+possible.
+
+Some say a game needs to have a story. I say that's bollocks.
+
+Installation: just run make and hope for the best. You will need the development
+libraries for C++ boost and ncurses.
+
+Playing instructions are given in the beginning of the game; simply run it in
+your terminal with the command
+	./kaaliisi
+(or just 'kaaliisi' if you installed it in your path.)
+
+The game was developed for Linux only. Suggestions and/or bug reports can be
+sent via email to <onnir the-at-sign-here iki and-the-dot-comes-here fi>
+but I make no promises that they would invoke any kind of action from my part.
+
+About the source:
+-----------------
+
+First of all, if you want to enjoy the game at all, please don't jump straight
+into reading the source; that would be very spoily.
+
+Most of the code was written way back, without much plans, and is really messy.
+Until recently, lack of interest kept me from finishing the game. And then when
+I decided to finish it, I had a really hard time figuring out my old code. So
+it's a mess still.
+
+There are still some display bugs, but mostly due to bad design. They're more
+of an annoyance; the game is fully playable.
+
