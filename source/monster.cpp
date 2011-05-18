@@ -12,7 +12,7 @@ namespace
 using namespace IO;
 using namespace std;
 
-const short MAX_MONSTER_B = 22;
+const short MAX_MONSTER_B = 25;
 
 const string apps[MAX_MONSTER_B] = {
 "%", //lunchkin
@@ -28,13 +28,16 @@ const string apps[MAX_MONSTER_B] = {
 "||", //big toam
 "/\\", //greater yardworm [2x1]
 "k", //kinetic kid
+"W", // woolly wyrm
 "<>||<>", //malevolent abstraction [2x3]
 "V'", //stalactite [1x2]
 "||!!", //enormous toam [2x2]
+"VV", // wide woolly wyrm [2x1]
 "--- | ", //mega anime tree [3x2]
 ".", // invisible perv
 " | -+- | ", //holy slayer [3x3]
 "O / / / O", //super-size lunchkin [3x3]
+"\\/\\/", //very wide woolly wyrm [4x1]
 " /\\ /  \\", //greatest yardworm [4x2]
 " _/ L_" //chaos cactus [2x3]			B=21
 };
@@ -53,28 +56,32 @@ C_RED, //chainsaw wielding space orc
 C_YELLOW, //big toam
 C_MAGENTA, //greater yardworm
 C_LIGHT_CYAN, //kinetic kid
+C_BROWN, // woolly wyrm
 C_CYAN, //malevolent abstraction
 C_LIGHT_GRAY, //stalactite
 C_YELLOW, //enormous toam
+C_BROWN, // wide woolly wyrm
 C_BROWN, //mega anime tree
 C_LIGHT_GRAY, // invisible perv
 C_WHITE, //holy slayer
 C_BROWN, //super-size lunchkin
+C_BROWN, // very wide woolly wyrm
 C_MAGENTA, //greatest yardworm
 C_MAGENTA //chaos cactus
 };
 
-const char xsizes[MAX_MONSTER_B] = { 1, 1, 1, 3, 2, 1, 1, 2, 2, 3, 2, 2, 1, 2, 1, 2, 3, 1, 3, 3, 4, 2 };
+const char xsizes[MAX_MONSTER_B] = { 1, 1, 1, 3, 2, 1, 1, 2, 2, 3, 2, 2, 1, 1, 2, 1, 2, 2, 3, 1, 3, 3, 4, 4, 2 };
 
 const string names[MAX_MONSTER_B] = { "lunchkin", "double snake", "toam", "poof", "giant batling", "yardworm", "anime tree",
 	"pie monster", "big lunchkin", "chainsaw wielding space orc", "big toam", "greater yardworm", "kinetic kid",
-	"malevolent abstraction", "stalactite", "enormous toam", "mega anime tree", "invisible perv", "holy slayer",
-	"super-size lunchkin", "greatest yardworm", "chaos cactus" };
+	"woolly wyrm", "malevolent abstraction", "stalactite", "enormous toam", "wide woolly wyrm", "mega anime tree",
+	"invisible perv", "holy slayer", "super-size lunchkin", "very wide woolly wyrm", "greatest yardworm", "chaos cactus" };
 
 // Some monsters don't act every turn:
-const char act_every[MAX_MONSTER_B] = { 1, 1, 2/*toam*/, 1, 1, 1, 2/*anime tree*/, 1, 1, 1, 2/*big toam*/, 2/*greater yardworm*/,
-	1, 3/*malevolent abstraction*/, 2/*stalactite*/, 3/*enormous toam*/, 3/*mega anime tree*/, 1, 1, 2/*super-size lunchkin*/,
-	3/*greatest yardworm*/, 2 /*chaos cactus*/ };
+const char act_every[MAX_MONSTER_B] = { 1, 1, 2/*toam*/, 1, 1, 1, 2/*anime tree*/, 1, 1, 1,
+	2/*big toam*/, 2/*greater yardworm*/, 1, 1, 3/*malevolent abstraction*/, 2/*stalactite*/,
+	3/*enormous toam*/, 1, 3/*mega anime tree*/, 1, 1, 2/*super-size lunchkin*/,
+	2/*very www*/, 3/*greatest yardworm*/, 2 /*chaos cactus*/ };
 
 }
 
