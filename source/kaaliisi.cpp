@@ -8,7 +8,6 @@ using namespace std;
 
 string killer = "";
 int killcount = 0;
-int fleecount = 0;
 
 int main()
 {
@@ -38,22 +37,21 @@ Good luck. Now press any key.");
 	{
 	case 0: cout << "Quitter!"; break;
 	case -1: cout << "You, the unnamed, epicene adventurer were killed by "
-			<< IO::art(killer) << '.' << endl << "You managed to kill "
-			<< killcount << " monster(s), though, and gathered "
-			<< Item::get_inventory_size() << " different items.";
-			if(fleecount)
-				cout << " You fled (or got bored?) " << fleecount << " times.";
-			else 
-				cout << " You never fled, which makes your death somewhat heroic.";
+			<< IO::art(killer) << '.' << endl << "You managed to kill ";
+			if(!killcount)
+				cout << "no one";
+			else if(killcount == 1)
+				cout << "a monster, though,";
+			else
+				cout << killcount << " monsters, though,";
+			cout << " and gathered " << Item::get_inventory_size() << " different items.";
 			break;
 	case 1: cout << "Congratulations; after killing " << killcount
-			<< " monster(s) and having gathered "
-			<< Item::get_inventory_size() << " different items, YOU WIN! Ain't that swell.";
-			if(fleecount)
-				cout << endl << "Your glory is only dimmened by the fact that you "
-					"escaped danger and/or boredom on " << fleecount << " occasion(s).";
-			else
-				cout << " You never even fled, which earns you the title of an IRONMAN!";
+			<< " monsters and having gathered "
+			<< Item::get_inventory_size() << " different items, YOU WIN! Isn't that swell.";
+			break;
+	case 2: cout << "You escape the dungeon never to return.";
+			break;
 	}
 
 	cout << endl << endl;

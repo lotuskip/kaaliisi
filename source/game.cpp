@@ -17,7 +17,7 @@ Map curmap;
 std::list<Monster> monsters;
 
 extern std::string killer;
-extern int killcount, fleecount;
+extern int killcount;
 
 namespace
 {
@@ -280,11 +280,7 @@ char Kaaliisi::run()
 				if(monsters.front().getB() >= 50)
 					break; // won!
 				//else
-				++fleecount;
-				Coords PCc = monsters.front().get_pos();
-				PCc.x = (PCc.x + screen_x) % screen_x;
-				PCc.y = (PCc.y + map_y) % map_y;
-				newmap(PCc);
+				return 2; // player fled
 			}
 			else if(b == 0) // hit a wall
 				print_msg("Mmpphh!");
