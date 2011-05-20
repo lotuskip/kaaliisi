@@ -1,6 +1,6 @@
 # Maintainer: Onni R. <onnir at iki dot fi>
 pkgname=kaaliisi
-pkgver=1
+pkgver=2
 pkgrel=1
 pkgdesc="A very minimalistic roguelike game."
 url="http://github.com/lotuskip/kaaliisi"

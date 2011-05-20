@@ -48,17 +48,6 @@ char input_to_dir(const char input)
 }
 
 
-void newmap(const Coords PCcoords)
-{
-	curmap.init(screen_x,map_y);
-	curmap.dig(PCcoords);
-	if(monsters.size() > 1)
-		monsters.erase(++(monsters.begin()), monsters.end()); // erase all but PC
-	monsters.front().set_pos(PCcoords);
-	items.clear();
-}
-
-
 // For health printing: (find the closest rational number with 1-digit numerator&denominator)
 char health_n = 1, health_m = 1;
 const char testlist_n[26] = { 8, 7, 6, 5, 4, 7, 3, 5, 2, 5, 3, 4, 5, 1, 4, 2, 3, 1, 2, 3, 1, 2, 1, 1, 1, 1 };
@@ -172,7 +161,10 @@ void Kaaliisi::init()
 	Monster pc;
 	pc.init(0);
 	monsters.push_back(pc);
-	newmap(Coords(screen_x/2,map_y/2));
+	curmap.init(screen_x,map_y);
+	Coords PCcoords(screen_x/2, map_y/2);
+	curmap.dig(PCcoords);
+	monsters.front().set_pos(PCcoords);
 }
 
 
