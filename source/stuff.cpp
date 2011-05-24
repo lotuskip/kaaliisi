@@ -7,15 +7,16 @@ namespace
 using namespace std;
 using namespace IO;
 
-const char NUM_FOODS = 5;
+const char NUM_FOODS = 7;
 const char NUM_OTHERS = 50;
 
 const char chance_food = 62;
 
-const string food_names[NUM_FOODS] = { "pearly jam", "mouldy ham", "taco sham",
-"can of spam" /* stolen from Alphaman */, "leg of lamb" };
+const string food_names[NUM_FOODS] = { "grand slam", "pearly jam", "creaky clam",
+"mouldy ham", "taco sham", "can of spam" /* stolen from Alphaman */, "leg of lamb" };
 
-const e_Colour food_colours[NUM_FOODS] = { C_WHITE, C_LIGHT_RED, C_YELLOW, C_LIGHT_GRAY, C_BROWN };
+const e_Colour food_colours[NUM_FOODS] = { C_LIGHT_GREEN, C_WHITE, C_GREEN,
+C_LIGHT_RED, C_YELLOW, C_LIGHT_GRAY, C_BROWN };
 
 // Many of these have been inspired by such games as ADOM, Nethack, and Alphaman
 const string other_names[NUM_OTHERS] = { "sharp rock", "plastic cloak", "studded girdle",
@@ -30,7 +31,7 @@ const string other_names[NUM_OTHERS] = { "sharp rock", "plastic cloak", "studded
 "quest item", "vol. II of the Magic Mini Giant", "strange item", "force field generator",
 "Universal Gear", "solution", "loom", "vol. III of the Magic Mini Giant", "Grail" };
 
-}
+} // end local namespace
 
 map<string,short> Item::inventory;
 

@@ -242,18 +242,17 @@ char Monster::move_randomly(const bool internal)
 void Monster::cancel_prev_move() { trymove(!prev_move_dir); }
 
 
-void Monster::eat(const string foodname, const char food_value)
+void Monster::eat(const string &foodname, const char food_value)
 {
 	if(name == "you")
 		print_msg("You eat " + art(foodname) + '.');
-	if(E < 900*B/10)
+	if(E < 90*B)
 	{
-		E += B*10*(food_value+1);
-		if(E > 900*B/10)
-			E = 900*B/10;
+		E += B*9*(food_value+1);
+		if(E > 90*B)
+			E = 90*B;
 	}
 }
-
 
 
 char Monster::get_dist_to(const Coords &c)

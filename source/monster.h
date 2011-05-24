@@ -26,7 +26,7 @@ public:
 	std::string get_name() const;
 
 	void rest();
-	void eat(const std::string foodname, const char food_value);
+	void eat(const std::string &foodname, const char food_value);
 	char trymove(const e_Dir d); // returns 0 if couldn't move, 1 if moved, and -1 if left the map
 	char move_towards(const Coords &c);
 	char move_randomly(const bool internal = false);
