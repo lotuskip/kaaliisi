@@ -40,9 +40,14 @@ char input_to_dir(const char input)
 {
 	switch(input)
 	{
-	case '1': return D_SW; case '2': return D_S; case '3': return D_SE;
-	case '4': return D_W; case '6': return D_E; case '7': return D_NW;
-	case '8': return D_N; case '9': return D_NE;
+	case '1': case 'b': return D_SW;
+	case '2': case 'j': return D_S;
+	case '3': case 'n': return D_SE;
+	case '4': case 'h': return D_W;
+	case '6': case 'l': return D_E;
+	case '7': case 'y': return D_NW;
+	case '8': case 'k': return D_N;
+	case '9': case 'u': return D_NE;
 	}
 	return -1; // no direction
 }
@@ -278,7 +283,7 @@ char Kaaliisi::run()
 				print_msg("Mmpphh!");
 			// else walked, okay
 		}
-		else if(input == '5')
+		else if(input == '5' || input == '.')
 		{
 			print_msg("You rest.");
 			monsters.front().rest();

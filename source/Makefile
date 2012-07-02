@@ -9,7 +9,7 @@ OBJS=$(subst .cpp,.o,$(SRCS))
 all: kaaliisi
 
 kaaliisi: $(OBJS)
-	$(CXX) -o ../kaaliisi $(OBJS) $(LDLIBS) 
+	$(CXX) -o ../kaaliisi $(CPPFLAGS) $(OBJS) $(LDLIBS) 
 
 coords.o: coords.cpp
 figure.o: figure.cpp

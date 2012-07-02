@@ -19,10 +19,10 @@ int main()
 You are the blue '@'. Use numpad keys 1-9 to move (5 to rest), enter\n\
 'Q' to quit, and 'i' to view your inventory.\n\
 Collect '=' symbols to have something in your inventory.\n\
-Collect '0' symbols (food) to increase your energy (shown in the\n\
-top-left corner). Kill monsters to become better. Collecting items\n\
-also increases your powers. The aim is to first become very powerful\n\
-and then leave the dungeon.\n\
+Collect '0' symbols (food) to increase your energy (shown in the top-\n\
+left corner). Kill monsters to become better. Collecting items also\n\
+increases your powers. The aim is to first become very powerful and\n\
+then leave the dungeon.\n\
 The monsters will try to kill you, and you die when your energy\n\
 drops to 0.\n\
 Good luck. Now press any key.");
