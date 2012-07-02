@@ -4,7 +4,6 @@
 #include "coords.h"
 
 #include <string>
-#include <boost/lexical_cast.hpp>
 
 namespace IO
 {
@@ -28,9 +27,6 @@ namespace IO
 	char getkey();
 
 	std::string art(const std::string &target);
-
-	// to convert 1234 => "1234" for instance
-	template<class T, class S> T lex_cast(S arg) { return boost::lexical_cast<T>(int(arg)); }
 
 	const char screen_x = 80;
 	const char screen_y = 25;

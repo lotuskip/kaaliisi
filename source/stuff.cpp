@@ -1,6 +1,7 @@
 #include "stuff.h"
 #include "rng.h"
 #include "monster.h"
+#include <sstream>
 
 namespace
 {
@@ -30,6 +31,13 @@ const string other_names[NUM_OTHERS] = { "sharp rock", "plastic cloak", "studded
 "chaos reward", "hidden flower", "super-hero cape", "balalaika", "box set",
 "quest item", "vol. II of the Magic Mini Giant", "strange item", "force field generator",
 "Universal Gear", "solution", "loom", "vol. III of the Magic Mini Giant", "Grail" };
+
+string lex_cast(const int n)
+{
+	stringstream ss;
+	ss << n;
+	return ss.str();
+}
 
 } // end local namespace
 
@@ -104,7 +112,7 @@ void Item::print_stuff() // static!
 		for(map<string,short>::const_iterator i = inventory.begin(); i != inventory.end(); ++i)
 		{
 			if(i->second > 1)
-				s += lex_cast<string>(i->second) + ' ' + i->first + 's';
+				s += lex_cast(i->second) + ' ' + i->first + 's';
 			else s += art(i->first);
 			s += ", ";
 

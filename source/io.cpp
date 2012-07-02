@@ -146,4 +146,3 @@ void IO::clr_print(const string &s)
 	getkey();
 }
 
-
