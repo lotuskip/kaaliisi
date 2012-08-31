@@ -9,7 +9,6 @@ using namespace std;
 using namespace IO;
 
 const char NUM_FOODS = 7;
-const char NUM_OTHERS = 50;
 
 const char chance_food = 62;
 

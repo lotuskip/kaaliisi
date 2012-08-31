@@ -1,6 +1,7 @@
 #include "io.h"
 #include "game.h"
 #include "stuff.h"
+#include "monster.h"
 
 #include <iostream>
 
@@ -8,6 +9,7 @@ using namespace std;
 
 string killer = "";
 int killcount = 0;
+unsigned long rests = 1;
 
 int main()
 {
@@ -53,7 +55,9 @@ Good luck. Now press any key.");
 	case 2: cout << "You escape the dungeon never to return.";
 			break;
 	}
-
-	cout << endl << endl;
+	cout << endl << "Final score: ";
+	cout << (double(Item::get_inventory_size())/NUM_OTHERS)*
+		(double(Kaaliisi::types_killed())/MAX_MONSTER_B)/rests
+		<< endl << endl;
 	return 0;
 }

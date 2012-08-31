@@ -18,6 +18,7 @@ std::list<Monster> monsters;
 
 extern std::string killer;
 extern int killcount;
+extern unsigned long rests;
 
 namespace
 {
@@ -288,6 +289,7 @@ char Kaaliisi::run()
 			print_msg("You rest.");
 			monsters.front().rest();
 			update_health_bar();
+			++rests;
 		}
 		else if(input == 'i')
 			Item::print_stuff();
@@ -302,3 +304,8 @@ char Kaaliisi::run()
 	return 1;
 }
 
+
+int Kaaliisi::types_killed()
+{
+	return mon_types_killed.size();
+}

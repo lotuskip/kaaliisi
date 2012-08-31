@@ -4,6 +4,8 @@
 #include <string>
 #include "figure.h"
 
+const short MAX_MONSTER_B = 25;
+
 class Monster
 {
 public:

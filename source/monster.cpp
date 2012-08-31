@@ -12,8 +12,6 @@ namespace
 using namespace IO;
 using namespace std;
 
-const short MAX_MONSTER_B = 25;
-
 const string apps[MAX_MONSTER_B] = {
 "%", //lunchkin
 "$", //double snake
@@ -39,7 +37,7 @@ const string apps[MAX_MONSTER_B] = {
 "O / / / O", //super-size lunchkin [3x3]
 "\\/\\/", //very wide woolly wyrm [4x1]
 " /\\ /  \\", //greatest yardworm [4x2]
-" _/ L_" //chaos cactus [2x3]			B=21
+" _/ L_" //chaos cactus [2x3]			B=25
 };
 
 const e_Colour colours[MAX_MONSTER_B] = {

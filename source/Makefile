@@ -1,6 +1,6 @@
-CXX=g++
+CXX=clang++
 RM=rm -f
-CPPFLAGS=-O2 -Wall -Wno-char-subscripts -pedantic
+CPPFLAGS=-O2 -Wall -Wextra -Wno-char-subscripts -pedantic
 LDLIBS=-lncurses
 
 SRCS=coords.cpp figure.cpp game.cpp io.cpp kaaliisi.cpp map.cpp monster.cpp rng.cpp stuff.cpp

@@ -9,6 +9,8 @@
 
 class Monster;
 
+const char NUM_OTHERS = 50;
+
 class Item
 {
 public:
